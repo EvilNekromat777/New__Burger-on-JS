@@ -1,19 +1,11 @@
 // Подключаем шрифты
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
 
-// Шрифт по умолчанию
-$fontfamili: "Lato";
 
-// Подключаем файлы со стилями страниц и элементов
 @import "header.scss";
-
-// Обнуление: общие параметры
 @import "null.scss";
-
-// Миксины
 @import "mixins.scss";
 
-// Оболочка
 .wrapper {
     overflow: hidden;
     min-height: 100%;
@@ -60,3 +52,6 @@ $fontfamili: "Lato";
         margin: 0px 0px 20px 0px;
     }
 }
+
+
+
