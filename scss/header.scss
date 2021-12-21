@@ -199,5 +199,79 @@ body._touch{
                 transform: scale(1) translate(0px, -50%);
             }
         }
+
+        &__icon._active{
+
+            span{
+                transform: scale(0) translate(0px, -50%);
+            }
+
+            &:before{
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+
+            &:after{
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+        }
+
+        &__body{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 100px 30px 30px 30px;
+            transition: left 0.3s ease 0s;
+            overflow: auto;
+
+            &:before{
+                content: "";
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 70px;
+                background-color: #912105;
+                z-index: 2;
+            }
+        }
+
+        &__body._active{
+            left: 0;
+        }
+
+        &__list > li{
+            margin: 0px 0px 30px 0px;
+            flex-wrap: wrap;
+
+            &:last-child{
+                margin: 0;
+            }
+        }
+
+        &__list > li._active .menu__sub-list{
+            display: block;
+        }
+
+        &__link{
+           font-size: 24px;
+        }
+
+        &__sub-list{
+            position: relative;
+            background-color: #fff;
+            flex: 1 1 100%;
+            margin: 20px 0px 0px 0px;
+            display: none;
+        }
+
+        &__sub-link{
+            font-size: 20px;
+            color: #000;
+        }
     }
 }
